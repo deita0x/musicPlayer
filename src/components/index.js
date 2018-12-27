@@ -4,6 +4,7 @@ import Divider from './Divider';
 import PlayerControls from './PlayerControls';
 import PlaybackBar from './PlaybackBar';
 import TrackInfo from './TrackInfo';
+import SongsList from './SongsList';
 
 export {
   Background,
@@ -12,4 +13,5 @@ export {
   PlayerControls,
   PlaybackBar,
   TrackInfo,
+  SongsList,
 };

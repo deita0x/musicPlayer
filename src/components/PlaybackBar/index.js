@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
   },
   thumbStyle: {
     backgroundColor: 'white',
-    height: 7,
-    width: 7
+    height: 8,
+    width: 8
   },
 });
 

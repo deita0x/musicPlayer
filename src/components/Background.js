@@ -1,6 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo';
+import { View } from 'react-native-easy-layout-view';
 
 const Background = ({ children }) => {
   return (
@@ -11,7 +12,7 @@ const Background = ({ children }) => {
       locations={[0.0, 0.99]}
       style={{ flex: 1 }}
     >
-      <View style={{ flex: 1, backgroundColor: 'rgba(255,255,255,0.2)' }}>
+      <View flex style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}>
         {children}
       </View>
     </LinearGradient>

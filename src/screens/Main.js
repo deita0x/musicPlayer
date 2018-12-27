@@ -7,28 +7,37 @@ import {
   Waves,
   PlayerControls,
   PlaybackBar,
-  TrackInfo
+  TrackInfo,
+  SongsList,
 } from '@components';
 
 export default class Main extends Component {
   render() {
     return (
       <Background>
-        <Waves style={{ position: 'absolute', bottom: 0 }}>
-          <View flex-1>
-            <View height-25 marginH-25>
-              <PlaybackBar />
-            </View>
+        <View height-35 />
 
-            <View height-65 marginT-10>
-              <TrackInfo />
-            </View>
+        <View flex-1 marginT-35>
+          <SongsList />
+        </View>
 
-            <View height-60 marginT-40>
-              <PlayerControls />
+        <View flex-1>
+          <Waves style={{ position: 'absolute', bottom: 0 }}>
+            <View flex-1>
+              <View height-25 marginH-25>
+                <PlaybackBar />
+              </View>
+
+              <View height-65 marginT-10>
+                <TrackInfo />
+              </View>
+
+              <View height-60 marginT-40>
+                <PlayerControls />
+              </View>
             </View>
-          </View>
-        </Waves>
+          </Waves>
+        </View>
       </Background>
     );
   }
