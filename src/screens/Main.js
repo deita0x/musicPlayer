@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { View } from 'react-native-easy-layout-view'
+import { View } from 'react-native-easy-layout-view';
 
-import { Background, Divider, Waves, PlayerControls } from '@components';
+import {
+  Background,
+  Divider,
+  Waves,
+  PlayerControls,
+  PlaybackBar,
+  TrackInfo
+} from '@components';
 
 export default class Main extends Component {
   render() {
@@ -9,11 +16,15 @@ export default class Main extends Component {
       <Background>
         <Waves style={{ position: 'absolute', bottom: 0 }}>
           <View flex-1>
-            <View height-25 style={{ backgroundColor: 'pink' }}></View>
-            <Divider height={10} />
-            <View height-65 style={{ backgroundColor: 'blue' }}></View>
-            <Divider height={40} />
-            <View height-60>
+            <View height-25 marginH-25>
+              <PlaybackBar />
+            </View>
+
+            <View height-65 marginT-10>
+              <TrackInfo />
+            </View>
+
+            <View height-60 marginT-40>
               <PlayerControls />
             </View>
           </View>

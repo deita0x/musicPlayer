@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { Icons } from '@assets';
 
 const Icon = ({ name, width = null }) => {
@@ -10,14 +10,21 @@ const Icon = ({ name, width = null }) => {
 
   return (
     <TouchableOpacity style={{ width, flex: 1 }}>
-      <Image source={Icons[name]} style={{
-        flex: 1,
-        width: imageWidth,
-        height: null,
-        resizeMode: 'contain'
-      }} />
+      <Image
+        source={Icons[name]}
+        style={[styles.imageIcon, { width: imageWidth }]}
+      />
     </TouchableOpacity>
   );
 };
+
+const styles = StyleSheet.create({
+  imageIcon: {
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'contain'
+  }
+});
 
 export default Icon;
